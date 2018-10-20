@@ -1,0 +1,394 @@
+{
+  "gas": 2000000,
+  "gasPrice": "8333333333",
+  "contractWS": "ws://localhost:8650",
+  "contractUri": "http://localhost:8640",
+  "contractAddress": "0x723bd53dcfe8ce2d8534e674af296c1f4222a396",
+  "abi": [{
+    "anonymous": false,
+    "inputs": [{
+      "indexed": true,
+      "name": "_owner",
+      "type": "address"
+    }, {
+      "indexed": true,
+      "name": "_spender",
+      "type": "address"
+    }, {
+      "indexed": false,
+      "name": "_value",
+      "type": "uint256"
+    }],
+    "name": "Approval",
+    "type": "event"
+  }, {
+    "constant": false,
+    "inputs": [{
+      "name": "machine",
+      "type": "address"
+    }],
+    "name": "addGameMachine",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }, {
+    "constant": false,
+    "inputs": [{
+      "name": "spender",
+      "type": "address"
+    }, {
+      "name": "value",
+      "type": "uint256"
+    }],
+    "name": "approve",
+    "outputs": [{
+      "name": "",
+      "type": "bool"
+    }],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }, {
+    "constant": false,
+    "inputs": [{
+      "name": "by",
+      "type": "address"
+    }, {
+      "name": "value",
+      "type": "uint256"
+    }],
+    "name": "consume",
+    "outputs": [{
+      "name": "",
+      "type": "bool"
+    }],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }, {
+    "anonymous": false,
+    "inputs": [{
+      "indexed": true,
+      "name": "user",
+      "type": "address"
+    }, {
+      "indexed": false,
+      "name": "amount",
+      "type": "uint256"
+    }],
+    "name": "Exchange",
+    "type": "event"
+  }, {
+    "anonymous": false,
+    "inputs": [{
+      "indexed": false,
+      "name": "user",
+      "type": "address"
+    }, {
+      "indexed": false,
+      "name": "amount",
+      "type": "uint256"
+    }, {
+      "indexed": false,
+      "name": "transactionHash",
+      "type": "bytes32"
+    }],
+    "name": "Pay",
+    "type": "event"
+  }, {
+    "anonymous": false,
+    "inputs": [{
+      "indexed": true,
+      "name": "machine",
+      "type": "address"
+    }, {
+      "indexed": true,
+      "name": "player",
+      "type": "address"
+    }, {
+      "indexed": false,
+      "name": "value",
+      "type": "uint256"
+    }],
+    "name": "Consume",
+    "type": "event"
+  }, {
+    "constant": false,
+    "inputs": [{
+      "name": "amount",
+      "type": "uint256"
+    }],
+    "name": "exchange",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }, {
+    "anonymous": false,
+    "inputs": [{
+      "indexed": true,
+      "name": "_from",
+      "type": "address"
+    }, {
+      "indexed": true,
+      "name": "_to",
+      "type": "address"
+    }, {
+      "indexed": false,
+      "name": "_value",
+      "type": "uint256"
+    }],
+    "name": "Transfer",
+    "type": "event"
+  }, {
+    "anonymous": false,
+    "inputs": [{
+      "indexed": true,
+      "name": "machine",
+      "type": "address"
+    }, {
+      "indexed": true,
+      "name": "player",
+      "type": "address"
+    }, {
+      "indexed": false,
+      "name": "value",
+      "type": "uint256"
+    }],
+    "name": "Reward",
+    "type": "event"
+  }, {
+    "constant": false,
+    "inputs": [{
+      "name": "vs",
+      "type": "uint8[]"
+    }, {
+      "name": "rs",
+      "type": "bytes32[]"
+    }, {
+      "name": "ss",
+      "type": "bytes32[]"
+    }, {
+      "name": "message",
+      "type": "bytes"
+    }],
+    "name": "pay",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }, {
+    "constant": false,
+    "inputs": [{
+      "name": "machine",
+      "type": "address"
+    }],
+    "name": "removeGameMachine",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }, {
+    "constant": false,
+    "inputs": [{
+      "name": "to",
+      "type": "address"
+    }, {
+      "name": "value",
+      "type": "uint256"
+    }],
+    "name": "reward",
+    "outputs": [{
+      "name": "",
+      "type": "bool"
+    }],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }, {
+    "constant": false,
+    "inputs": [{
+      "name": "newRequiredSignatures",
+      "type": "uint256"
+    }],
+    "name": "setRequiredSignatures",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }, {
+    "constant": false,
+    "inputs": [{
+      "name": "to",
+      "type": "address"
+    }, {
+      "name": "value",
+      "type": "uint256"
+    }],
+    "name": "transfer",
+    "outputs": [{
+      "name": "",
+      "type": "bool"
+    }],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }, {
+    "constant": false,
+    "inputs": [{
+      "name": "from",
+      "type": "address"
+    }, {
+      "name": "to",
+      "type": "address"
+    }, {
+      "name": "value",
+      "type": "uint256"
+    }],
+    "name": "transferFrom",
+    "outputs": [{
+      "name": "",
+      "type": "bool"
+    }],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }, {
+    "inputs": [{
+      "name": "totalSupply",
+      "type": "uint256"
+    }, {
+      "name": "tokenName",
+      "type": "string"
+    }, {
+      "name": "tokenSymbol",
+      "type": "string"
+    }, {
+      "name": "decimalUnits",
+      "type": "uint8"
+    }, {
+      "name": "_requiredSignatures",
+      "type": "uint256"
+    }],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  }, {
+    "constant": true,
+    "inputs": [{
+      "name": "",
+      "type": "address"
+    }],
+    "name": "_authorizdedMachines",
+    "outputs": [{
+      "name": "",
+      "type": "bool"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }, {
+    "constant": true,
+    "inputs": [{
+      "name": "owner",
+      "type": "address"
+    }, {
+      "name": "spender",
+      "type": "address"
+    }],
+    "name": "allowance",
+    "outputs": [{
+      "name": "",
+      "type": "uint256"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }, {
+    "constant": true,
+    "inputs": [{
+      "name": "owner",
+      "type": "address"
+    }],
+    "name": "balanceOf",
+    "outputs": [{
+      "name": "",
+      "type": "uint256"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }, {
+    "constant": true,
+    "inputs": [],
+    "name": "decimals",
+    "outputs": [{
+      "name": "",
+      "type": "uint8"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }, {
+    "constant": true,
+    "inputs": [],
+    "name": "name",
+    "outputs": [{
+      "name": "",
+      "type": "string"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }, {
+    "constant": true,
+    "inputs": [{
+      "name": "",
+      "type": "bytes32"
+    }],
+    "name": "payed",
+    "outputs": [{
+      "name": "",
+      "type": "bool"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }, {
+    "constant": true,
+    "inputs": [],
+    "name": "requiredSignatures",
+    "outputs": [{
+      "name": "",
+      "type": "uint256"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }, {
+    "constant": true,
+    "inputs": [],
+    "name": "symbol",
+    "outputs": [{
+      "name": "",
+      "type": "string"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }, {
+    "constant": true,
+    "inputs": [],
+    "name": "totalSupply",
+    "outputs": [{
+      "name": "",
+      "type": "uint256"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }],
+  "owner": "0xebB588dE5f4ADAFAe88ef326eeC78afC5585B844",
+  "ownerPassword": "zhouanxin"
+}
